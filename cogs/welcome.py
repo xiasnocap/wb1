@@ -13,9 +13,9 @@ from discord.utils import get
 from PIL import Image, ImageFont, ImageDraw
 import time
 
-welcome_channel_id = "welcome channel id here" #remove ""
-verify_channel_id = "verification channel id here" #remove ""
-role_name = "role name here"
+welcome_channel_id = "842457037056376922" #remove ""
+verify_channel_id = "842525467243184148" #remove ""
+role_name = "member"
 
 class Test(commands.Cog):
     def __init__(self, client):
@@ -57,7 +57,7 @@ class Test(commands.Cog):
 
             embed2 = discord.Embed(
                 title = "Welcome!",
-                description=f"Hey,\n welcome to **{guild.name}**!\n\nPlease complete the verification. Under this message you can see an image with a code. Send `&verify [code]` in a channel, you are able to send messages to.\n\nPlease do not forget to remove [] while typing in the command!"
+                description=f"Hey,\n welcome to **{guild.name}**!\n"
             )
             embed2.timestamp = datetime.datetime.utcnow()
             embed2.set_image(url=f'attachment://{member.id}.png')
