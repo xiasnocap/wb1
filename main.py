@@ -16,17 +16,17 @@ intents = discord.Intents.default()
 intents.members = True
 intents = discord.Intents.all()
 
-client = commands.Bot(command_prefix='&', intents = intents)
+client = commands.Bot(command_prefix='7', intents = intents)
 
 client.remove_command('help')
 
 #bot is ready
 @client.event
 async def on_ready():
-    print("\nI'm ready!11!!!!1!\n")
+    print("\nArch Angels has started\n")
 
-    game = discord.Game('with some new peoples...')
-    await client.change_presence(status=discord.Status.online, activity=game)
+    game = discord.Game('Arch Angels')
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Arch Angels"))
 
 for filename in os.listdir("./cogs"):
     if filename.endswith(".py") and filename !="__init__.py":
