@@ -13,8 +13,8 @@ from discord.utils import get
 from PIL import Image, ImageFont, ImageDraw
 import time
 
-welcome_channel_id = "842457037056376922" #remove ""
-verify_channel_id = "842525467243184148" #remove ""
+welcome_channel_id = 842457037056376922 #remove ""
+verify_channel_id = 842525467243184148 #remove ""
 role_name = "member"
 
 class Test(commands.Cog):
@@ -32,8 +32,8 @@ class Test(commands.Cog):
                 
             embed = discord.Embed(
                 title="Welcome",
-                description=f"Hey {member.mention},\nwelcome to {member.guild.name}"
-                )
+                description=f"Hey {member.mention},\nWelcome to {member.guild.name}"
+            )
             embed.set_thumbnail(url=member.avatar_url)
             embed.timestamp = datetime.datetime.utcnow()
             await channel.send(embed=embed)
@@ -46,10 +46,10 @@ class Test(commands.Cog):
 
 
             img_bg = Image.open('bg.png').convert('RGB')
-            font = ImageFont.truetype('arial.ttf', 60)
+            font = ImageFont.truetype('arial.ttf', 65)
             draw = ImageDraw.Draw(img_bg)
 
-            draw.text((62,39), str(random_int), font=font, fill='#b57d86')
+            draw.text((62,39), str(random_int), font=font, fill='#FF0000')
             img_bg.save(f'{member.id}.png')
 
 
